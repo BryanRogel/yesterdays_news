@@ -4,20 +4,20 @@ function Header({ stars }) {
     return(
         <>
             <nav className="col-12">
-            <div className="left-menu centered">marca</div>
-            <div className="center-menu centered">
-                <div className="title">
-                    <p className="name centered">EL SALVADOR</p>
-                    <p className="date centered">{moment().format("MMM D, YYYY")}</p>
+                <div className="left-menu centered">marca</div>
+                <div className="center-menu centered">
+                    <div className="title">
+                        <p className="name centered">EL SALVADOR</p>
+                        <p className="date centered">{moment().format("MMM D, YYYY")}</p>
+                    </div>
                 </div>
-            </div>
-            <div className="right-menu">
-                <div className="content centered">
-                    <p className="price">$0.25</p>
-                    <p className="separator">|</p>
-                    <p className="location">San Salvador</p>
+                <div className="right-menu">
+                    <div className="content centered">
+                        <p className="price">$0.25</p>
+                        <p className="separator">|</p>
+                        <p className="location">San Salvador</p>
+                    </div>
                 </div>
-            </div>
             </nav>
             <style jsx>{`
             @font-face {
