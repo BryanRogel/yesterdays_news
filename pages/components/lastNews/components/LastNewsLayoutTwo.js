@@ -5,15 +5,15 @@ const LastNewsLayoutTwo = () => {
         <>
             <img
                 className="col-xl-6 col-6"
-                src="https://cdn-pro.elsalvador.com/wp-content/uploads/2019/04/apulo.jpg"
+                src="https://nationalcybersecurity.com/wp-content/uploads/Corona_Scam.jpg"
                 alt="foto"
                 style={{ height: '125px', width: '200px' }}
             />
             <div className="col-xl-6 col-6 right">
-                <h1>Hola esta es una prueba</h1>
+                <h1>Beware of COVID-19 scams, fraudulent activity | #coronavirus | #scams | #covid19</h1>
                 <span>{moment().endOf('day').fromNow()}</span>
             </div>
-            <p className="col-xl-12 col-12">Minim velit eiusmod consequat exercitation nostrud ad elit fugiat enim fugiat. Sit ipsum commodo in dolore. Magna duis do magna adipisicing laboris sunt velit id. Aute occaecat ex sint quis nulla. Exercitation quis mollit fugiat excepteur id magna ut adipisicing irure proident.</p>
+            <p className="col-xl-12 col-12">The COVID-19 virus has affected just about every aspect of our lives. Government and health organizations have cautioned us to protect ourselves physically, but these are not the only safety measures to take. The Federal Trade Commission reports an increase i…</p>
             <style jsx>{`
                 @font-face {
                     font-family: 'bebas-neue';
@@ -28,6 +28,7 @@ const LastNewsLayoutTwo = () => {
                     font-weight: 100;
                     margin-top: 0px;
                     text-align: justify;
+                    font-size: 15px;
                 }
                 p, span {
                     font-family: 'roboto-light';
@@ -44,6 +45,7 @@ const LastNewsLayoutTwo = () => {
                     padding: 0px;
                     text-align: justify;
                     font-size: 13px;
+                    color: #979797;
                 }
                 .right {
                     padding-right: 0px;

@@ -4,13 +4,12 @@ export default function NewsHeadlines() {
         <aside className="row">
             <img
                 className="col-xl-6 col-6"
-                src="https://cdn-pro.elsalvador.com/wp-content/uploads/2019/04/apulo.jpg"
+                src="https://s3media.freemalaysiatoday.com/wp-content/uploads/2020/08/Wires-Twitter-hack-050820-AP.jpg"
                 alt="foto"
-                style={{ height: '100px', width: '200px' }}
+                style={{ height: '100px' }}
             />
             <div className="col-xl-6 col-6 center">
-                <h1>Hola esta es una prueba</h1>
-                <span></span>
+                <h1>US teen suspect behind Bitcoin scam pleads not guilty to Twitter hack</h1>
             </div>
         </aside>
         <style jsx>{`
@@ -26,11 +25,11 @@ export default function NewsHeadlines() {
                 font-family: 'bebas-neue';
                 font-weight: 100;
                 margin-top: 0px;
-                font-size: 1.5em;
+                font-size: 15px;
             }
             img {
                 filter: grayscale(100%);
-                object-fit: cover;
+                object-fit: contain;
                 padding-left: 0px;
             }
             .center {

@@ -6,7 +6,7 @@ import LastNewsLayoutTwo from './components/LastNewsLayoutTwo';
 function LastNews() {
     useEffect(() => {
         getMeta(
-            "https://cdn-pro.elsalvador.com/wp-content/uploads/2019/04/apulo.jpg"
+            "https://nationalcybersecurity.com/wp-content/uploads/Corona_Scam.jpg"
         );
     }, [])
 
