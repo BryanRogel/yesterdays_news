@@ -18,7 +18,7 @@ function LastNews() {
         img.onload = function() {
             if(this.height+100 > this.width){
                 setLayoutType(true)
-            } else {false
+            } else {
                 setLayoutType(false)
             }
             console.log(this.width + 'px ' + this.height + 'px')
@@ -46,7 +46,7 @@ function LastNews() {
             width: 100%;
             color: #000;
             aside {
-                border-top: solid 2px #979797;
+                border-top: solid 2px #d4d4d4;
                 padding-top: 15px;
             }
             .row {

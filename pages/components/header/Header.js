@@ -35,8 +35,8 @@ function Header({ stars }) {
                     justify-content: flex-start;
                 }
                 .center-menu {
-                    border-top: solid 1.5px #979797;
-                    border-bottom: solid 1.5px #979797;
+                    border-top: solid 1.5px #d4d4d4;
+                    border-bottom: solid 1.5px #d4d4d4;
                     width: 20%;
                     justify-content: center;
                     
@@ -59,7 +59,7 @@ function Header({ stars }) {
                     font-size: 10px;
                     letter-spacing: 3px;
                     margin: 0px;
-                    color: #979797;
+                    color: #d4d4d4;
                     justify-content: center;
                 }
                 .separator {
@@ -73,7 +73,7 @@ function Header({ stars }) {
                 }
                 .content {
                     display: flex;
-                    border-bottom: solid 1.5px #979797;
+                    border-bottom: solid 1.5px #d4d4d4;
                     justify-content: center;
                 }
                 @media only screen and (max-width: 600px) {
