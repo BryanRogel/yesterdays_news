@@ -3,7 +3,7 @@ import moment from 'moment';
 const LastNewsLayoutOne = () => {
     return(
         <>
-            <div className="col-xl-6 col-6">
+            <div className="col-xl-6 col-6 left">
                 <h1>Hola esta es una prueba</h1>
                 <span>{moment().endOf('day').fromNow()}</span>
                 <p>Minim velit eiusmod consequat exercitation nostrud ad elit fugiat enim fugiat. Sit ipsum commodo in dolore. Magna duis do magna adipisicing laboris sunt velit id. Aute occaecat ex sint quis nulla. Exercitation quis mollit fugiat excepteur id magna ut adipisicing irure proident.</p>
@@ -27,16 +27,28 @@ const LastNewsLayoutOne = () => {
                     font-family: 'bebas-neue';
                     font-weight: 100;
                     margin-top: 0px;
+                    text-align: justify;
                 }
                 p, span {
                     font-family: 'roboto-light';
-                    max-height: 130px;
+                    max-height: 133px;
                     text-overflow: ellipsis;
                     overflow: hidden;
                 }
                 img {
                     filter: grayscale(100%);
                     object-fit: cover;
+                    padding-right: 0px;
+                }
+                p, h1, span {
+                    text-align: justify;
+                    padding-left: 0px;
+                }
+                p {
+                    font-size: 13px;
+                }
+                .left {
+                    padding-left: 0px;
                 }
             `}</style>
         </>
