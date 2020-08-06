@@ -1,60 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Head from 'next/head';
 
 import styles from '../styles/Home.module.css';
 import Header from './components/header/Header';
-import MainNews from './components/mainNews/MainNews';
-import LastNews from './components/lastNews/LastNews';
-import NewsHeadlines from './components/newsHeadlines/NewsHeadlines';
-import { getAllNew } from './store/actions/newsAction';
+import HomeNews from './components/homeNews/HomeNews';
+import { getAllNew } from '../store/actions/newsAction';
 
 function Home({ getNews }) {
-
-  const [ dataNews, setDataNews ] = useState([]);
 
   useEffect(() => {
     getNews()
   }, [])
 
   return (
-    <>
-      <div className={styles.container}>
-        <Head>
-          <title>NEWS!!!</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Header/>
-        <div className="row" style={{ margin: 0 }}>
-          <div id="first" className="col-12 col-sm-6 col-md-8 col-lg-3 col-xl-3">
-            <LastNews/>
-          </div>
-          <div id="second" className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <MainNews/>
-          </div>
-          <div id="third" className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-            <NewsHeadlines/>
-            <NewsHeadlines/>
-            <NewsHeadlines/>
-            <NewsHeadlines/>
-            <NewsHeadlines/>
-          </div>
-        </div>
-      </div>
-      <style jsx>{`
-      @media only screen and (max-width: 991px) {
-        #first {
-          order: 2;
-        }
-        #second {
-          order: 1;
-        }
-        #third {
-          order: 3;
-        }
-      }
-      `}</style>
-    </>
+    <div className={styles.container}>
+      <Head>
+      <title>NEWS!!!</title>
+      <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header/>
+      <HomeNews/>
+    </div>
   )
 }
 
