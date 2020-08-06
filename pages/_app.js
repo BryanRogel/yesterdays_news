@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import '../styles/bootstrap.min.css';
 import { Provider } from 'react-redux';
 
-import store from './store';
+import store from '../store';
 
 export default function MyApp({ Component, pageProps }) {
   return (

@@ -1,15 +1,15 @@
-export default function NewsHeadlines() {
+export default function NewsHeadlines({ dataNews }) {
     return(
         <>
         <aside className="row">
             <img
                 className="col-xl-6 col-6"
-                src="https://s3media.freemalaysiatoday.com/wp-content/uploads/2020/08/Wires-Twitter-hack-050820-AP.jpg"
+                src={dataNews?.urlToImage}
                 alt="foto"
                 style={{ height: '100px' }}
             />
             <div className="col-xl-6 col-6 center">
-                <h1>US teen suspect behind Bitcoin scam pleads not guilty to Twitter hack</h1>
+                <h1>{dataNews?.title}</h1>
             </div>
         </aside>
         <style jsx>{`

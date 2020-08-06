@@ -3,11 +3,9 @@ import { useState, useEffect } from 'react';
 import LastNewsLayoutOne from './components/LastNewsLayoutOne';
 import LastNewsLayoutTwo from './components/LastNewsLayoutTwo';
 
-function LastNews() {
+function LastNews({ dataNews }) {
     useEffect(() => {
-        getMeta(
-            "https://nationalcybersecurity.com/wp-content/uploads/Corona_Scam.jpg"
-        );
+        getMeta(dataNews?.urlToImage);
     }, [])
 
     const [layoutType, setLayoutType] = useState(false)
@@ -29,9 +27,9 @@ function LastNews() {
         <>
         <aside className="row">
             {layoutType ?
-                <LastNewsLayoutOne/>
+                <LastNewsLayoutOne dataNews={dataNews} />
                 : 
-                <LastNewsLayoutTwo/>
+                <LastNewsLayoutTwo dataNews={dataNews} />
             }
         </aside>
         <style jsx>{`

@@ -1,7 +1,5 @@
 import axios from "axios";
 
-import { getAllNews } from '../../services/path';
-
 export const GET_ALL_NEWS_LOADING = "GET_ALL_NEWS_LOADING";
 export const GET_ALL_NEWS_SUCCESS = "GET_ALL_NEWS_SUCCESS";
 export const GET_ALL_NEWS_FAIL = "GET_ALL_NEWS_FAIL";
@@ -12,14 +10,16 @@ const getAllNewsFail = (payload) => ({ type: GET_ALL_NEWS_FAIL, payload });
 
 const getAllNew = () => async (dispatch) => {
     dispatch(getAllNewsLoading());
-    console.log('entre 1', getAllNews())
     try {
-        let response = await axios.get(getAllNews());
-        console.log('entre 2', response)
+        let response = await axios.get('/api/news');
         let data = [];
         if (response.status === 200) {
-            console.log('entre 3', response)
-        await dispatch(getAllNewsSuccess(response));
+            const data = {
+                status: '200',
+                message: "Complete",
+                result: response.data.result,
+            };
+        dispatch(getAllNewsSuccess(data));
         } else {
         data = {
             status: null,

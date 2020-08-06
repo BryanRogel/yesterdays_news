@@ -1,19 +1,19 @@
 import moment from 'moment';
 
-const LastNewsLayoutTwo = () => {
+const LastNewsLayoutTwo = ({ dataNews }) => {
     return(
         <>
             <img
                 className="col-xl-6 col-6"
-                src="https://nationalcybersecurity.com/wp-content/uploads/Corona_Scam.jpg"
+                src={ dataNews?.urlToImage}
                 alt="foto"
                 style={{ height: '125px', width: '200px' }}
             />
             <div className="col-xl-6 col-6 right">
-                <h1>Beware of COVID-19 scams, fraudulent activity | #coronavirus | #scams | #covid19</h1>
+                <h1>{dataNews?.title}</h1>
                 <span>{moment().endOf('day').fromNow()}</span>
             </div>
-            <p className="col-xl-12 col-12">The COVID-19 virus has affected just about every aspect of our lives. Government and health organizations have cautioned us to protect ourselves physically, but these are not the only safety measures to take. The Federal Trade Commission reports an increase i…</p>
+            <p className="col-xl-12 col-12">{dataNews?.description}</p>
             <style jsx>{`
                 @font-face {
                     font-family: 'bebas-neue';

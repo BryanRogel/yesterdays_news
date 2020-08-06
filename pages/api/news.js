@@ -1,7 +1,6 @@
-import { getNews } from '../services/path';
+import { getNews } from '../../services/path';
 
 export default async (req, res) => {
-    console.log('object', getNews())
     if (req.method === 'GET') {
         const response = await fetch(getNews());
         let data = await response.json();
@@ -13,9 +12,9 @@ export default async (req, res) => {
                 if ( i < 5 ) {
                     lastNews.push(itemData)
                 } else if (i = 5 && i < 10) {
-                    mainNews.push(itemData)
-                } else if (i = 10 && i < 25) {
                     headLines.push(itemData)
+                } else if (i = 10 && i < 25) {
+                    mainNews.push(itemData)
                 }
             });
             res.statusCode = 200;
