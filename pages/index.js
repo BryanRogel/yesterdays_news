@@ -1,12 +1,22 @@
+import { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 
+import styles from '../styles/Home.module.css';
 import Header from './components/header/Header';
 import MainNews from './components/mainNews/MainNews';
 import LastNews from './components/lastNews/LastNews';
 import NewsHeadlines from './components/newsHeadlines/NewsHeadlines';
+import { getAllNew } from './store/actions/newsAction';
 
-function Home() {
+function Home({ getNews }) {
+
+  const [ dataNews, setDataNews ] = useState([]);
+
+  useEffect(() => {
+    getNews()
+  }, [])
+
   return (
     <>
       <div className={styles.container}>
@@ -23,6 +33,10 @@ function Home() {
             <MainNews/>
           </div>
           <div id="third" className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <NewsHeadlines/>
+            <NewsHeadlines/>
+            <NewsHeadlines/>
+            <NewsHeadlines/>
             <NewsHeadlines/>
           </div>
         </div>
@@ -44,4 +58,12 @@ function Home() {
   )
 }
 
-export default Home;
+const mapStateToProps = (state) => ({
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  getNews: () => dispatch(getAllNew()),
+})
+
+
+export default connect( mapStateToProps, mapDispatchToProps )(Home);
