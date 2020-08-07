@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import MainNews from '../mainNews/MainNews';
 import LastNews from '../lastNews/LastNews';
 import NewsHeadlines from '../newsHeadlines/NewsHeadlines';
+import AutoplayCarousel from '../autoplayCarousel/AutoplayCarousel';
 
 function HomeNews({
     data,
@@ -13,6 +14,7 @@ function HomeNews({
 
     return (
         <>
+            <AutoplayCarousel dataNews={ isSuccess && data?.allNews } />
             <div className="row" style={{ margin: 0 }}>
                 <div id="first" className="col-12 col-sm-6 col-md-8 col-lg-3 col-xl-3">
                 { isSuccess && data?.lastNews.map((dataNews, i) => (

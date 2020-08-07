@@ -24,7 +24,8 @@ export default async (req, res) => {
                 "result": {
                     "lastNews": lastNews,
                     "mainNews": mainNews,
-                    "headLines": headLines
+                    "headLines": headLines,
+                    "allNews": data?.articles
                 }
             });
         } else {
