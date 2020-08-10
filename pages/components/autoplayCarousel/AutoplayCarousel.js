@@ -3,8 +3,6 @@ function AutoplayCarousel({ dataNews }){
 
     const lol = dataNews;
 
-    lol && lol.push(...lol);
-
     return(
         <>
             <div className="slider">
