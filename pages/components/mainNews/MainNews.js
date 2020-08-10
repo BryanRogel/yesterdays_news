@@ -11,7 +11,7 @@ export default function MainNews(){
                     style={{ height: '275px', }}
                 />
                 <div className="col-xl-12 col-12">
-                <p>Source: Yahoo Entertainment</p>
+                {/* <p>Source: Yahoo Entertainment</p> */}
                     <h1>UN experts: North Korea flouts sanctions on nukes, missiles</h1>
                     <p>U.N. experts say North Korea is flouting U.N. sanctions by expanding its nuclear arsenal and ballistic missile program and by exporting coal and illegally importing refined petroleum products in excess of its annual quota. The experts said in key sections of …</p>
                 </div>
