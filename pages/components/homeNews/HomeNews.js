@@ -30,8 +30,8 @@ function HomeNews({
             </div>
             <style jsx>{`
                 .scroll {
-                    max-height: calc(100vh - 100px);
-                    overflow-y: scroll;
+                    max-height: calc(100vh - 5em);
+                    overflow-y: auto;
                 }
 
                 .scroll::-webkit-scrollbar-track {
