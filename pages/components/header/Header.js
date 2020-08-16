@@ -24,6 +24,9 @@ function Header({ stars }) {
                 font-family: 'bebas-neue';
                 src: url('/fonts/bebas-neue.ttf');
                 }
+                .col-12 {
+                    max-width: 1366px;
+                }
                 nav {
                     height: 3em;
                     margin: 1em;

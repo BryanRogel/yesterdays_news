@@ -29,6 +29,9 @@ function HomeNews({
                 </div>
             </div>
             <style jsx>{`
+                .row {
+                    max-width: 1366px;
+                }
                 .scroll {
                     max-height: calc(100vh - 5em);
                     overflow-y: auto;
