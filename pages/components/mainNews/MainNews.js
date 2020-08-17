@@ -17,20 +17,23 @@ export default function MainNews({ dataNews }){
                 </div>
                 </main>
             <style jsx>{`
-                img {
-                    filter: grayscale(100%);
-                    object-fit: contain;
-                }
                 main {
                     padding-top: 15px;
                     border: solid 2px #d4d4d4;
                     margin: 0px;
+                    max-height: 500px;
+                    min-height: 500px;
                 }
                 p {
                     color: #979797;
                 }
                 h1 {
                     margin: 0;
+                    font-size: 25px;
+                }
+                img {
+                    object-fit: cover;
+                    filter: grayscale(100%);
                 }
             `}</style>
         </>

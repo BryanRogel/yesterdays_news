@@ -16,7 +16,7 @@ function HomeNews({
             <div className="row" style={{ margin: 0 }}>
                 <div id="first" className="col-12 col-sm-6 col-md-8 col-lg-3 col-xl-3 scroll">
                 { isSuccess && data?.lastNews.map((dataNews, i) => (
-                    dataNews?.urlToImage && <LastNews dataNews={dataNews} key={i}/>
+                    <LastNews dataNews={dataNews} key={i}/>
                 ))}
                 </div>
                 <div id="second" className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -24,7 +24,7 @@ function HomeNews({
                 </div>
                 <div id="third" className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 scroll">
                     { isSuccess && data?.headLines.map((dataNews, i) => (
-                        dataNews?.urlToImage && <NewsHeadlines dataNews={dataNews} key={i}/>
+                        <NewsHeadlines dataNews={dataNews} key={i}/>
                     ))}
                 </div>
             </div>
@@ -57,16 +57,22 @@ function HomeNews({
                     color-stop(0.72, rgb(103, 105, 110)),
                     color-stop(0.86, rgb(74, 75, 77)));
                 }
-
                 @media only screen and (max-width: 991px) {
                     #first {
                         order: 2;
                     }
                     #second {
                         order: 1;
+                        margin-bottom: 10px;
                     }
                     #third {
                         order: 3;
+                    }
+                }
+                @media only screen and (max-width: 575px){
+                    .scroll {
+                        max-height: 100%;
+                        overflow-y: inherit;
                     }
                 }
             `}</style>
