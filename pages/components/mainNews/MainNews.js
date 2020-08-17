@@ -33,6 +33,7 @@ export default function MainNews({ dataNews }){
                 }
                 img {
                     object-fit: cover;
+                    filter: grayscale(100%);
                 }
             `}</style>
         </>

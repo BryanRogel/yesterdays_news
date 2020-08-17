@@ -9,11 +9,11 @@ export default async (req, res) => {
             const mainNews = [];
             const headLines = [];
             data?.articles.forEach((itemData, i) => {
-                if ( i < 5 ) {
+                if ( i < 5 && itemData?.description && itemData?.urlToImage ) {
                     lastNews.push(itemData)
-                } else if (i = 5 && i < 10) {
+                } else if (i = 5 && i < 10 && itemData?.description && itemData?.urlToImage) {
                     headLines.push(itemData)
-                } else if (i = 10 && i < 25) {
+                } else if (i = 10 && i < 25 && itemData?.description && itemData?.urlToImage) {
                     mainNews.push(itemData)
                 }
             });

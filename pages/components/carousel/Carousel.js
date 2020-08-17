@@ -3,7 +3,6 @@ import Slider from 'infinite-react-carousel';
 
 import MainNews from "../../components/mainNews/MainNews";
 
-
 export default function Carousel({ dataNews }) {
 
     const settings =  {
@@ -14,15 +13,10 @@ export default function Carousel({ dataNews }) {
     };
 
     return(
-        <>
         <Slider { ...settings }>
             {dataNews && dataNews.map((data, i) => (
-                <MainNews style={{ height: '200px'}} dataNews={data} key={i} />
+                <MainNews dataNews={data} key={i} />
             ))}
         </Slider>
-        <style jsx>{`
-            
-        `}</style>
-        </>
     );
 }
