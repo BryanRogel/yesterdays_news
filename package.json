@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "infinite-react-carousel": "^1.2.11",
     "moment": "^2.27.0",
     "next": "9.5.1",
     "react": "16.13.1",
