@@ -20,7 +20,7 @@ function HomeNews({
                 ))}
                 </div>
                 <div id="second" className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    {isSuccess && <Carousel className="m-auto" dataNews={data?.mainNews}/> }
+                    {isSuccess && <Carousel dataNews={data?.mainNews}/> }
                 </div>
                 <div id="third" className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 scroll">
                     { isSuccess && data?.headLines.map((dataNews, i) => (

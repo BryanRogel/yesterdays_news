@@ -21,7 +21,6 @@ export default function MainNews({ dataNews }){
                     padding-top: 15px;
                     border: solid 2px #d4d4d4;
                     margin: 0px;
-                    max-height: 500px;
                     min-height: 500px;
                 }
                 p {
